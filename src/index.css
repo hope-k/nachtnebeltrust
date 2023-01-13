@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap');
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0px 0px 0px 0px;
+
+}
+
+
+.homeBg {
+  width: 100%;
+  height: 105vh;
+  background-repeat: no-repeat;
+  filter: brightness(50%);
+  background-size: cover;
+  position: absolute;
+  background-position: center center;
+  background-image: linear-gradient(to right, rgba(8, 15, 110, 0.5), rgba(90, 142, 219, 0.53)),
+    url('https://res.cloudinary.com/hopekumordzie/image/upload/v1663938655/tablechat_ri3cgr.jpg');
+}
+
+.loginBg {
+  background-repeat: no-repeat;
+  position: absolute;
+  background-image: linear-gradient(to right, rgba(8, 15, 110, 0.5), rgba(90, 142, 219, 0.53)),
+    url('https://res.cloudinary.com/hopekumordzie/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1647710414/tab_lbiyh3.jpg');
+  ;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 1;
+  filter: brightness(45%);
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+
+.registerBg {
+  background-repeat: no-repeat;
+  position: absolute;
+  background-image: linear-gradient(to right, rgba(8, 15, 110, 0.5), rgba(90, 142, 219, 0.53)),
+    url('https://res.cloudinary.com/hopekumordzie/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1647710414/tab_lbiyh3.jpg');
+  ;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  filter: brightness(45%);
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+
+.bgTransparent {
+  background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+.lora {
+  font-family: 'Raleway',
+    sans-serif;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff7a;
+}
+
+
+.intro {
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  filter: brightness(45%);
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+
+
+
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 1.3px solid rgb(31, 100, 139);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.6px solid;
+  border-color: teal transparent;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

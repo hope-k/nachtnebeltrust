@@ -28,11 +28,11 @@ const Home = () => {
                     <div className=' px-4 lg:px-[10rem] h-full w-full z-10 relative  lg:items-baseline'>
                         <div className='md:pt-[5rem] w-full flex flex-col justify-center items-start relative'>
                             <div id='heading' className='relative whitespace-nowrap flex text-[#cababa] text-[18px] tracking-wider font-light md:pb-11 pb-8 pt-6 lg:pt-8'>
-                                <span id='heading'>Invest.</span><span className='ml-6 relative'><ShieldCheckIcon className='w-5 absolute right-14 top-1' /> Secure</span> . Guarantee
+                                <span id='heading'>Invest.</span><span className='ml-6 relative'><ShieldCheckIcon className='w-5 absolute right-16 md:right-14 top-1' /> Secure</span> . Guarantee
                             </div>
 
                             <h1 className='md:text-4xl text-3xl pb-8 text-[#f0f0f0] lora md:max-w-lg tracking-normal font-semibold'>Welcome to the <span className='border-b-2 border-[#34790e] font-medium tracking-tight  mb-2'>Nachtnebel Trust</span>. Your Next Experience In Trust.</h1>
-                            <p className='md:max-w-[100ch] md:text-[16px] text-[14px] text-[#C0C0C0] tracking-wide lg:mb-6'>
+                            <p className='md:max-w-[100ch] md:text-[16px] text-[15px] text-[#C0C0C0] tracking-wide lg:mb-6'>
                                 Nachtnebeltrust is a revolutionary new bank that offers a comprehensive suite of financial services to help you achieve your financial goals. With Nachtnebeltrust, managing your personal finances has never been easier. Our user-friendly platform allows you to easily send and receive money all over the world, giving you the freedom to conduct business and manage your finances on a global scale.
                                 At Nachtnebeltrust, our mission is to empower you to succeed in both your business income management and your personal finances. We understand that achieving financial success takes time and effort, and we're here to help you every step of the way. With our cutting-edge technology and unparalleled customer service, we're committed to making your banking experience as seamless and stress-free as possible. Join Nachtnebeltrust today and take control of your financial future.
                             </p>

@@ -12,6 +12,7 @@ const AdminDeposit = () => {
     const [amount, setAmount] = useState('');
     const [accountID, setAccountID] = useState('');
     const [userID, setUserID] = useState('');
+    const [from, setFrom] = useState('')
 
     const { notify } = useNotifications();
     const { error, success, loading } = useSelector(state => state.adminTransactions)
@@ -44,12 +45,13 @@ const AdminDeposit = () => {
     const submitHandler = (e) => {
         e.preventDefault();
 
-        dispatch(adminDeposit({ user: userID, amount: amount, accountId: accountID, transactionType: transactionType, status: status }));
+        dispatch(adminDeposit({ user: userID, amount: amount, accountId: accountID, from: from, transactionType: transactionType, status: status }));
 
         setUserID('')
         setAccountID('')
         setAmount('')
         setStatus('')
+        setFrom('')
 
 
     }
@@ -63,7 +65,6 @@ const AdminDeposit = () => {
         <>
             <div className='flex flex-col justify-center'>
                 <form className='px-4 ' onSubmit={submitHandler}>
-
                     <div className='mt-6 bg-slate-100 border border-gray-200 rounded-xl p-6 flex flex-col justify-center items-center'>
                         <h1 className='mb-4 flex justify-start w-full font-bold'>DEPOSIT AMOUNT
                         </h1>
@@ -104,6 +105,20 @@ const AdminDeposit = () => {
                                 />
                                 <label className=' lg:flex duration-200 transition-all ease-in-out absolute top-[-1.5rem] peer-focus:top-[-1.5rem] peer-focus:text-sm peer-focus:text-teal-500 peer-focus:font-semibold  peer-placeholder-shown:top-[0] peer-placeholder-shown:text-base text-sm pointer-events-none text-gray-500'>
                                     $ Amount
+                                </label>
+
+                            </div>                          
+                              <div className='flex flex-col relative m-5 w-fit h-fit '>
+                                <input
+                                    className='z-[1] rounded-none bg-transparent peer pb-2 border-b border-gray-800 outline-none mb-6 placeholder-transparent focus-within:border-green-700 focus-within:border-b'
+                                    type='text'
+                                    placeholder=' '
+                                    value={from}
+                                    onChange={(e) => setFrom(e.target.value)}
+
+                                />
+                                <label className=' lg:flex duration-200 transition-all ease-in-out absolute top-[-1.5rem] peer-focus:top-[-1.5rem] peer-focus:text-sm peer-focus:text-teal-500 peer-focus:font-semibold  peer-placeholder-shown:top-[0] peer-placeholder-shown:text-base text-sm pointer-events-none text-gray-500'>
+                                    From 
                                 </label>
 
                             </div>

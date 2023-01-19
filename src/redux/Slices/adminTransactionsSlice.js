@@ -49,11 +49,11 @@ export const deleteTransaction = createAsyncThunk('/delete-transaction', async (
         return err.response.data
     }
 })
-export const adminDeposit = createAsyncThunk('/admin-deposit', async ({ user, status, accountId, transactionType, amount }, { getState }) => {
+export const adminDeposit = createAsyncThunk('/admin-deposit', async ({ user, status, accountId, transactionType, amount, from }, { getState }) => {
     try {
         const state = getState()
         const token = state.auth?.token
-        const { data } = await instance.post(`/api/admin-deposit`, { user, status, accountId, transactionType, amount }, {
+        const { data } = await instance.post(`/api/admin-deposit`, { user, status, accountId, transactionType, amount, from }, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
